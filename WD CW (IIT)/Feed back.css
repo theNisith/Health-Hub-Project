@@ -1,0 +1,51 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: wheat;
+    color: darkblue;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  ol {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 100px;
+  }
+  
+  .rating {
+    display: flex;
+    gap: 5px;
+    color: red;
+  }
+  
+  input[type="range"] {
+    width: 100%;
+  }
+  
+  button {
+    margin-top: 20px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  

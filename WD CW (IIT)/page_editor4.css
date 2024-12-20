@@ -1,0 +1,23 @@
+body{background-color: rgb(103, 165, 251);}
+
+h1{text-align: center;
+color: black;
+}
+
+.details{text-align: center;
+background-color: white;
+padding: 20px;
+margin: 20px;
+border: 1px solid black;
+}
+
+.gallery, .Sitemap, .content{
+    text-align: center;
+}
+
+a{
+    text-align: center;
+    color: rgb(32, 10, 82);
+    text-decoration: none;
+}
+

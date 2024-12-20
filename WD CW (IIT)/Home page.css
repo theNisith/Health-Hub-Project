@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto',sans-serif;
+    
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) ,url(Home\ background.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    
+
+}
+.logo{
+    cursor: pointer;
+    width: 50px;
+}
+.navbar{
+    height: 12%;
+    display: flex;
+    align-items: center;
+}
+.menu-icon{
+    width: 30px;
+    cursor: pointer;
+    margin-left: 40px;
+}
+nav{
+    flex: 1;
+    text-align: center;
+    font-size: 150pxy;
+    
+    
+    
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: left 60px; 
+    font-size: xx-large;
+    list-style: none;
+  
+    
+}
+
+nav ul li a{
+    text-decoration: none;
+    color:red;
+    font-size: large;
+    text-align: center;
+    font-weight: bold;
+    padding: 13px 15px;
+    
+}
+li a:hover:not(.active){
+    background-color: #4aa7d8;
+}
+.active{
+    background-color: #0e82a2;
+}
+
+p{
+    color:whitesmoke;
+}
+
+.row{
+    display: flex;
+    height: 88%;
+    align-items: center;
+    
+}
+.col{
+    flex-basis: 50%;
+}
+.card{
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+
+   
+    background-position: center;
+    background-size: cover;
+    transition:transform 0.5s;
+}
+.card1{
+    background-image: url(exercise.jpg);
+    font-size: larger;
+    
+}
+.card2{
+    background-image: url(Food\ and\ health.jpeg);
+    font-size: larger;
+}
+.card3{
+    background-image: url(age\ support.jpg );
+    font-size: larger;
+}
+.card4{
+    background-image: url(mental\ health.png);
+    font-size: larger;
+}
+.card:hover{
+    transform: translateY(-10px);
+}
+h1{
+    color: red;
+}
+h2{
+    color: black;
+}
+h5{
+    color:black;
+    text-shadow:0 0 5px #999;
+}
+h7{
+    color: cornflowerblue ;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+.PageEditor{
+    display: inline block;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.PageEditor:hover{
+    background-color: #45a049;
+    
+}
+
+

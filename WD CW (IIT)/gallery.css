@@ -1,0 +1,143 @@
+body{
+  font-family: sans-serif;
+  background-color: rgb(218, 225, 232);
+  overflow: hidden;
+}
+
+nav{
+  flex: 1;
+  text-align: center;
+  font-size: 150pxy;
+ 
+}
+
+nav ul li{
+  list-style: none;
+  display: inline-block;
+  margin: left 60px; 
+  font-size: xx-large;
+  list-style: none;
+ 
+  
+}
+
+nav ul li a{
+  text-decoration: none;
+  text-align: center;
+  color:black;
+  font-weight: bold;
+  padding: 13px 15px;
+  font-size: large;
+}
+
+li a:hover:not(.active){
+  background-color: #4aa7d8;
+}
+
+.active{background-color: #0e82a2;}
+
+h1{
+  text-align: center;
+  color:#12074e;
+  font-size: 40px;
+  padding-top: 15px;
+}
+
+/* Gallery styles */
+.gallery{
+  padding: 25px 50px 75px 100px; ;
+  
+}
+
+.gallery img{
+  width: 310px;
+  height: 250px;
+  border-radius: 10px;
+  padding: 5px;
+  transition: 1s;
+  cursor: pointer;
+  
+}
+
+.gallery img:hover{
+  opacity: 0.7;
+}
+
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.close {
+  color: #fff;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  margin-top: 20px;
+  text-align: justify;
+  
+  
+}
+
+/* Footer styles */
+footer{text-align:center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 10px;
+  padding: 3px;
+  background-color: rgb(16, 40, 80);
+  color: black;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;}
+
+
+/* Button styles */
+  .button {
+      background-color:white;
+      border: none;
+      color:black;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      margin: 4px 2px;
+      cursor: pointer;
+  }

@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+<style>
+
+body{background-image: url(background.jpg);
+    background-size: cover; 
+    background-position: center;}
+nav{
+    flex: 1;
+    text-align: center;
+    font-size: 150pxy;
+   
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: left 60px; 
+    font-size: xx-large;
+    list-style: none;
+   
+    
+}
+
+nav ul li a{
+    text-decoration: none;
+    text-align: center;
+    color:black;
+    font-weight: bold;
+    padding: 13px 15px;
+    font-size: large;
+}
+
+li a:hover:not(.active){
+    background-color: #4aa7d8;
+}
+
+.active{background-color: #0e82a2;}
+    .heading {text-align: center;
+         background-color: lightseagreen;
+         padding:80px;
+         
+        
+    }
+
+    .Startbt{background-color:rgb(0, 191, 255) ;
+       color: rgb(0, 0, 0);
+        width: 300px;
+        height: 100px;
+        font-size: 60px;
+        cursor: pointer;
+        border:none;
+        border-radius: 5px;    
+    }
+
+    .nextbt, .skipbt, .nextstep, .goforwd, .laststep, .Finish{
+        cursor: pointer;
+    }
+
+    label{ display: block;
+        margin-top: 1%;
+
+    }
+    #step1,#step2,#step3,#step4{position: relative;
+        top:100px;
+
+    }
+    .step1_1 , .step1_2 , .step1_3 , .step1_4, .step2_1, .step2_2, .step2_3, .step2_4, .step2_5, .step3_1, .step3_2, .step3_3, .step3_4, .step4_1, .step4_2, .step4_3, .step4_4{
+       padding: 10px;
+       text-align: center;
+        display:none;
+        
+    }
+
+    .error{ color: red;
+
+    }
+
+    .userinfo, .volunteeringDetails, .QualificationDetails, .AvailabilityDetails, .AllDetails{ text-align: center;
+              background-image: url();
+              padding: 10px;
+              border-color: chartreuse;
+              color: black;
+              display: none;
+
+    }
+    .ProgressBar1 {width: 25%;
+                 color: black;
+                 background-color: rgb(0, 255, 94);
+                 padding: 5px; 
+                 border-radius: 5px;
+                 border-color: black;
+    }  
+
+    .ProgressBar2 {width: 50%;
+                 color: black;
+                 background-color: rgb(2, 255, 99);
+                 padding: 5px; 
+                 border-radius: 5px;
+                 border-color: black;
+    }  
+
+    .ProgressBar3 {width: 75%;
+                 color: black;
+                 background-color: rgb(0, 255, 94);
+                 padding: 5px; 
+                 border-radius: 5px;
+                 border-color: black;
+    }  
+
+    .ProgressBar4  {width: 100%;
+                 color: black;
+                 background-color: rgb(0, 255, 94);
+                 padding: 5px; 
+                 border-radius: 5px;
+                 border-color: black;
+                 text-align: center;
+    }  
+    footer{text-align:center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 10px;
+  padding: 3px;
+  background-color: rgb(16, 40, 80);
+  color: black;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;}
+
+
+
+  .button {
+      background-color:white;
+      border: none;
+      color:black;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      margin: 4px 2px;
+      cursor: pointer;
+  }
+    
+    
+</style>
+</head>
+<body>
+
+
+    <nav>
+        <ul>
+            <li> <a href="home.html" class="active">Home</a></li>
+            <li> <a href="gallery.html">Gallery</a></li>
+            <li> <a href="shop.html">Shop</a></li>
+            <li> <a href="profile.html">User Profile</a></li>
+            <li> <a href="feedback.html">Feedback</a></li>
+            <li> <a href="sitemap.html">Sitemap</a></li>
+            <li> <a href="team.html">Team</a></li>
+        </ul>
+    </nav>
+    
+    <button type="button" class="Startbt"> Start </button>
+   
+
+    <!-- Step 1 --> 
+    <div id="Step1">
+    
+     <div class="step1_1">
+        <h2>STEP 1 Personal details &#124;&nbsp;&nbsp;&nbsp;&nbsp;Question 1/4</h2>
+        <label for="NameIn"><h3>Enter your name : </h3> </label>
+        <input type="text" id="NameIn" name="name"> 
+        <span class="error" id="nameError"></span><br><br>
+        <button type="button" class="nextbt">Next</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" class="skipbt">Skip</button>
+     </div>
+
+    
+     <div class="step1_2">
+        <h2>STEP 1 Personal details &#124;&nbsp;&nbsp;&nbsp;&nbsp;Question 2/4</h2>
+        <label for="SurName"><h3>Enter your surname : <h3> </label>
+        <input type="text" id="SurName" name="surname"> 
+        <span class="error" id="surnameError"></span><br><br>
+        <button type="button" class="nextbt">Next</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" class="skipbt">Skip</button>
+     </div>
+
+
+     <div class="step1_3">
+        <h2>STEP 1 Personal details &#124;&nbsp;&nbsp;&nbsp;&nbsp;Question 3/4</h2>
+        <label for="AgeIn"><h3>Enter your age : <h3> </label>
+        <input type="age" id="AgeIn" name="age"> 
+        <span class="error" id="ageError"></span><br><br>
+        <button type="button" class="nextbt">Next</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" class="skipbt">Skip</button>
+     </div>
+
+
+     <div class="step1_4">
+        <h2>STEP 1 Personal details &#124;&nbsp;&nbsp;&nbsp;&nbsp;Question 4/4</h2>
+        <label for="GenderIn"><h3>Select your gender : <h3> </label>
+        <select id="GenderIn" name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select> <br><br>
+        <button type="button" class="nextbt">Next</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" class="skipbt">Skip</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+
+     </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div id="Step2">
+        <div class="step2_1">
+           <h2>STEP 2 Volunteering tasks &#124;&nbsp;&nbsp;&nbsp;&nbsp;Question 1/5</h2>
+           <label for="Rationaln"><h3> Your rational : <h3> </label>
+           <input type="text" id="Rationaln" name="rational">
+           <span class="error" id="rationalError"></span><br><br>
+           <button type="button" class="nextbt">Next</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           <button type="button" class="skipbt">Skip</button>
+        </div>
+
+        <div class="step2_2">
+            <h2>STEP 2 Volunteering tasks &#124;&nbsp;&nbsp;&nbsp;&nbsp;Question 2/5</h2>
+            <label for="doaInput"><h3> DoA: <h3> </label>
+            <input type="text" id="doaInput" name="doa">
+            <span class="error" id="doaError"></span><br><br>
+            <button type="button" class="nextbt">Next</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" class="skipbt">Skip</button>
+         </div>
+
+         <div class="step2_3">
+            <h2>STEP 2 Volunteering tasks &#124;&nbsp;&nbsp;&nbsp;&nbsp;Question 3/5</h2>
+            <label for="TaskIn"><h3> Your task : <h3> </label>
+            <input type="text" id="TaskIn" name="task">
+            <span class="error" id="taskError"></span><br><br>
+            <button type="button" class="nextbt">Next</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" class="skipbt">Skip</button>
+         </div>
+
+         <div class="step2_4">
+            <h2>STEP 2 Volunteering tasks &#124;&nbsp;&nbsp;&nbsp;&nbsp;Question 4/5</h2>
+            <label for="PlaceIn"><h3>Your place : <h3> </label>
+            <input type="text" id="PlaceIn" name="place">
+            <span class="error" id="placeError"></span><br><br>
+            <button type="button" class="nextbt">Next</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" class="skipbt">Skip</button>
+         </div>
+
+         <div class="step2_5">
+            <h2>STEP 2 Volunteering tasks &#124;&nbsp;&nbsp;&nbsp;&nbsp;Question 5/5</h2>
+            <label for="AssingmentIn"><h3>Your assignment type : <h3> </label>
+            <input type="text" id="AssingmentIn" name="atype">
+            <span class="error" id="atypeError"></span><br><br>
+            <button type="button" class="nextbt">Next</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" class="skipbt">Skip</button>
+         </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div id="Step3">
+        <div class="step3_1">
+            <h2>STEP 3 Qualifications &#124;&nbsp;&nbsp;&nbsp;&nbsp;Question 1/4</h2>
+            <label for="StudyIn"><h3>Main field of study : </h3> </label>
+            <input type="text" id="StudyIn" name="studyf">
+            <span class="error" id="studyfError"></span><br><br>
+            <button type="button" class="nextbt">Next</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" class="skipbt">Skip</button>
+         </div>
+
+         <div class="step3_2">
+            <h2>STEP 3 Qualifications &#124;&nbsp;&nbsp;&nbsp;&nbsp;Question 2/4</h2>
+            <label for="DegreeIn"><h3>Your highest degree : </h3> </label>
+            <input type="text" id="DegreeIn" name="degree">
+            <span class="error" id="degreeError"></span><br><br>
+            <button type="button" class="nextbt">Next</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" class="skipbt">Skip</button>
+         </div>
+
+         <div class="step3_3">
+            <h2>STEP 3 Qualifications &#124;&nbsp;&nbsp;&nbsp;&nbsp;Question 3/4</h2>
+            <label for="UniversityIn"><h3>Your university : </h3> </label>
+            <input type="text" id="UniversityIn" name="uni">
+            <span class="error" id="uniError"></span><br><br>
+            <button type="button" class="nextbt">Next</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" class="skipbt">Skip</button>
+         </div>
+
+         <div class="step3_4">
+            <h2>STEP 3 Qualifications &#124;&nbsp;&nbsp;&nbsp;&nbsp;Question 4/4</h2>
+            <label for="YearIn"><h3>Your degree completion year : <h3> </label>
+            <input type="text" id="YearIn" name="year">
+            <span class="error" id="yearError"></span><br><br>
+            <button type="button" class="nextbt">Next</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" class="skipbt">Skip</button>
+         </div>
+
+    </div>
+
+    <!-- Step 4-->
+    <div id="Step4">
+        <div class="step4_1">
+            <h2>STEP 4 Availability and contact &#124;&nbsp;&nbsp;&nbsp;&nbsp;Question 1/4</h2>
+            <label for="HoursIn"><h3>Availability hours per week : </h3> </label>
+            <input type="text" id="HoursIn" name="hours">
+            <span class="error" id="hoursError"></span><br><br>
+            <button type="button" class="nextbt">Next</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" class="skipbt">Skip</button>
+         </div> 
+
+         <div class="step4_2">
+            <h2>STEP 4 Availability and contact &#124;&nbsp;&nbsp;&nbsp;&nbsp;Question 2/4</h2>
+            <label for="CountryIn"><h3>Your country : </h3> </label>
+            <input type="text" id="CountryIn" name="country">
+            <span class="error" id="countryError"></span><br><br>
+            <button type="button" class="nextbt">Next</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" class="skipbt">Skip</button>
+         </div> 
+    
+         <div class="step4_3">
+            <h2>STEP 4 Availability and contact &#124;&nbsp;&nbsp;&nbsp;&nbsp;Question 3/4</h2>
+            <label for="ContactNumb"><h3>Enter your contact number : </h3> </label>
+            <input type="text" id="ContactNumb" name="cnb">
+            <span class="error" id="cnbError"></span><br><br>
+            <button type="button" class="nextbt">Next</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" class="skipbt">Skip</button>
+         </div> 
+
+         <div class="step4_4">
+            <h2>STEP 4 Availability and contact &#124;&nbsp;&nbsp;&nbsp;&nbsp;Question 4/4</h2>
+            <label for="emailIn"><h3>Enter your E-mail address : </h3> </label>
+            <input type="email" id="emailIn" name="email">
+            <span class="error" id="emailError"></span><br><br>
+            <button type="button" class="Finish_button"> Finish </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+         </div> 
+    </div>
+
+    <div class="userinfo">
+    <h2>&#124;&nbsp;&nbsp;&nbsp;&nbsp;User Details &#124;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+    <h3>
+    <p><i>Name : </i><span id="User_name"></span></p>
+    <p><i>Surname : </i><span id="User_surname"></span></p>
+    <p><i>Age : </i><span id="User_age"></span></p>
+    <p><i>Gender : </i><span id="User_gender"></span></p>
+    </h3>
+    <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+        <div class="ProgressBar1">profile completed 25%</div>
+    </div><br>
+    <button type="button" class="nextstep">Next Step</button>
+    </div>
+
+    <div class="volunteeringDetails">
+        <h2>&#124;&nbsp;&nbsp;&nbsp;&nbsp;Volunteering Tasks &#124;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+        <h3>
+        <p><i>Rational : </i><span id="Volunteering_rational"></span></p>
+        <p><i>DoA : </i><span id="Volunteering_doa"></span></p>
+        <p><i>Task : </i><span id="Volunteering_task"></span></p>
+        <p><i>Place : </i><span id="Volunteering_place"></span></p>
+        <p><i>Assignment type : </i><span id="Volunteering_atype"></span></p>
+        </h3>
+        <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+            <div class="ProgressBar2">profile completed 50%</div>
+        </div><br>
+        <button type="button" class="goforwd">Next Step</button>
+    </div>
+
+    <div class="QualificationDetails">
+        <h2>&#124;&nbsp;&nbsp;&nbsp;&nbsp;Qualifications &#124;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+        <h3>
+        <p><i>Main feild of study : </i><span id="Qualification_studyf"></span></p>
+        <p><i>Highest degree : </i><span id="Qualification_degree"></span></p>
+        <p><i>Uviversity : </i><span id="Qualification_uni"></span></p>
+        <p><i>Completion year : </i><span id="Qualification_year"></span></p>
+         </h3>
+        <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+            <div class="progressBar3">profile completed 75%</div>
+        </div><br>
+        <button type="button" class="laststep">Last Step</button>
+    </div>
+    
+    
+    
+    <div class="AllDetails">
+        
+        <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                <div class="ProgressBar4 ">profile completed 100%</div>
+        </div><br>
+        <h2>&#124;&nbsp;&nbsp;&nbsp;&nbsp;User Details &#124;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+        <h3>
+        <p><i>Name : </i><span id="All_User_name"></span></p>
+        <p><i>Surname : </i><span id="All_User_surname"></span></p>
+        <p><i>Age : </i><span id="All_User_age"></span></p>
+        <p><i>Gender : </i><span id="All_User_gender"></span></p>
+        </h3>
+        <h2>&#124;&nbsp;&nbsp;&nbsp;&nbsp;Volunteering Tasks &#124;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+        <h3>
+        <p><i>Rational : </i><span id="All_Volunteering_rational"></span></p>
+        <p><i>DoA : </i><span id="All_Volunteering_doa"></span></p>
+        <p><i>Task : </i><span id="All_Volunteering_task"></span></p>
+        <p><i>Place : </i><span id="All_Volunteering_place"></span></p>
+        <p><i>Assignment type : </i><span id="All_Volunteering_atype"></span></p>
+        </h3>
+        <h2>&#124;&nbsp;&nbsp;&nbsp;&nbsp;Qualifications &#124;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+        <h3>
+        <p><i>Main feild of study : </i><span id="All_Qualification_studyf"></span></p>
+        <p><i>Highest degree : </i><span id="All_Qualification_degree"></span></p>
+        <p><i>Uviversity : </i><span id="All_Qualification_uni"></span></p>
+        <p><i>Completion year : </i><span id="All_Qualification_year"></span></p>
+         </h3>
+        <h2>&#124;&nbsp;&nbsp;&nbsp;&nbsp; Availability and contact&#124;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+        <h3>
+        <p><i>Availability hours per week : </i><span id="All_hours"></span></p>
+        <p><i>Country : </i><span id="All_country"></span></p>
+        <p><i>Contact number : </i><span id="All_cnb"></span></p>
+        <p><i>Email address : </i><span id="All_email"></span></p>
+        </h3>
+    </div>
+
+
+    <footer>
+
+        <a href="page_editor1.html"> <button  class="button" type="button">Page Editor 1</button> </a>
+        <a href="page_editor2.html"><button  class="button" type="button">Page Editor 2</button></a>
+        <a href="page_editor3.html"><button  class="button" type="button">Page Editor 3</button></a>
+        <a href="page_editor4.html"><button  class="button" type="button">Page Editor 4</button></a>
+    
+      </footer>
+
+
+<script>
+   document.addEventListener("DOMContentLoaded",function(){
+    const Startbt = document.querySelector(".Startbt");
+    const step1_1 = document.querySelector(".step1_1");
+    const step1_2 = document.querySelector(".step1_2");
+    const step1_3 = document.querySelector(".step1_3");
+    const step1_4 = document.querySelector(".step1_4");
+    const userinfo= document.querySelector(".userinfo");
+    const nextstep = document.querySelector(".nextstep");
+    const step2_1 = document.querySelector(".step2_1");
+    const step2_2 = document.querySelector(".step2_2");
+    const step2_3 = document.querySelector(".step2_3");
+    const step2_4 = document.querySelector(".step2_4");
+    const step2_5 = document.querySelector(".step2_5");
+    const volunteeringDetails =document.querySelector(".volunteeringDetails");
+    const goforwd = document.querySelector(".goforwd")
+    const step3_1 = document.querySelector(".step3_1");
+    const step3_2 = document.querySelector(".step3_2");
+    const step3_3 = document.querySelector(".step3_3");
+    const step3_4 = document.querySelector(".step3_4");
+    const QualificationDetails = document.querySelector(".QualificationDetails");
+    const laststep =document.querySelector(".laststep");
+    const step4_1 = document.querySelector(".step4_1");
+    const step4_2 = document.querySelector(".step4_2");
+    const step4_3 = document.querySelector(".step4_3");
+    const step4_4 = document.querySelector(".step4_4");
+    const AvailabilityDetails = document.querySelector(".AvailabilityDetails");
+    const AllDetails = document.querySelector(".AllDetails");
+  
+
+   Startbt.addEventListener("click",function(){
+   Startbt.style.display = "none";
+   step1_1.style.display = "block";
+   });
+   
+   const NameIn = document.getElementById("NameIn");
+   const nameError = document.getElementById("nameError");
+   const nextbtQ1 = document.querySelector(".step1_1 .nextbt");
+   const skipbtQ1 = document.querySelector(".step1_1 .skipbt");
+   
+
+   nextbtQ1.addEventListener("click",function(){
+    const name = NameIn.value.trim();
+    if (name === ""){
+      nameError.textContent = "Please enter your name";
+    }else if (!isNaN(name)){
+      nameError.textContent = "Please enter your name correctly!"
+    }else{
+     step1_1.style.display = "none";
+     step1_2.style.display = "block";
+    
+    }
+   });
+
+   skipbtQ1.addEventListener("click",function(){
+   step1_1.style.display = "none";
+   step1_2.style.display = "block";
+   });
+
+   const SurName = document.getElementById("SurName");
+   const surnameError = document.getElementById("surnameError");
+   const nextbtQ2 = document.querySelector(".step1_2 .nextbt");
+   const skipbtQ2 = document.querySelector(".step1_2 .skipbt");
+    
+   nextbtQ2.addEventListener("click",function(){
+   const surname = SurName.value.trim();
+   if (surname === ""){
+    surnameError.textContent = "Please enter your surname";
+    }else if (!isNaN(surname)){
+      surnameError.textContent = "Please enter your surname correctly!"
+    }else{
+   step1_2.style.display = "none";
+   step1_3.style.display = "block";
+    }
+   });
+   
+   skipbtQ2.addEventListener("click",function(){
+   step1_2.style.display = "none";
+   step1_3.style.display = "block";
+   });
+
+   const AgeIn = document.getElementById("AgeIn");
+   const ageError = document.getElementById ("ageError");
+   const nextbtQ3 = document.querySelector(".step1_3 .nextbt");
+   const skipbtQ3 = document.querySelector(".step1_3 .skipbt");
+
+   nextbtQ3.addEventListener("click",function(){
+   const age = AgeIn.value.trim();
+   if (age === ""){
+    ageError.textContent = "Please enter your age";
+   }else if (isNaN(age)){
+    ageError.textContent = "Please enter your age correctly!!"
+   }else{
+   step1_3.style.display = "none";
+   step1_4.style.display = "block";
+   }
+   });
+   
+   skipbtQ3.addEventListener("click",function(){
+   step1_3.style.display = "none";
+   step1_4.style.display = "block";
+   });
+
+   const nextbtQ4 = document.querySelector(".step1_4 .nextbt");
+   const skipbtQ4 = document.querySelector(".step1_4 .skipbt");
+
+
+   nextbtQ4.addEventListener("click",function(){
+   showUserDetails();
+   step1_4.style.display = "none";
+   });
+   skipbtQ4.addEventListener("click",function(){
+   showUserDetails();
+   step1_4.style.display = "none";
+   });
+
+   
+   nextstep.addEventListener("click",function(){
+    userinfo.style.display = "none";
+   step2_1.style.display = "block";
+   });
+
+   const Rationaln = document.getElementById("Rationaln");
+   const rationalError = document.getElementById("rationalError");
+   const nextbtQ5 = document.querySelector(".step2_1 .nextbt");
+   const skipbtQ5 = document.querySelector(".step2_1 .skipbt");
+   
+
+   nextbtQ5.addEventListener("click",function(){
+    const rational = Rationaln.value.trim();
+    if (rational === ""){
+        rationalError.textContent = "Please enter your rational";
+    }else if (!isNaN(rational)){
+        rationalError.textContent = "Please enter your rational correctly!"
+    }else{
+     step2_1.style.display = "none";
+     step2_2.style.display = "block";
+    }
+   });
+
+   skipbtQ5.addEventListener("click",function(){
+   step2_1.style.display = "none";
+   step2_2.style.display = "block";
+   });
+
+   const doaInput = document.getElementById("doaInput");
+   const doaError = document.getElementById("doaError");
+   const nextbtQ6 = document.querySelector(".step2_2 .nextbt");
+   const skipbtQ6 = document.querySelector(".step2_2 .skipbt");
+   
+
+   nextbtQ6.addEventListener("click",function(){
+    const doa = doaInput.value.trim();
+    if (doa === ""){
+        doaError.textContent = "Please enter your DoA";
+    }else if (!isNaN(doa)){
+        doaError.textContent = "Please enter your DoA correctly!"
+    }else{
+     step2_2.style.display = "none";
+     step2_3.style.display = "block";
+    }
+   });
+
+   
+
+   skipbtQ6.addEventListener("click",function(){
+   step2_2.style.display = "none";
+   step2_3.style.display = "block";
+   });
+
+   const TaskIn = document.getElementById("TaskIn");
+   const taskError = document.getElementById("taskError");
+   const nextbtQ7 = document.querySelector(".step2_3 .nextbt");
+   const skipbtQ7 = document.querySelector(".step2_3 .skipbt");
+   
+   nextbtQ7.addEventListener("click",function(){
+    const task = TaskIn.value.trim();
+    if (task === ""){
+        taskError.textContent = "Please enter your task";
+    }else if (!isNaN(task)){
+        taskError.textContent = "Please enter your task correctly!"
+    }else{
+        step2_3.style.display = "none";
+        step2_4.style.display = "block";
+    }
+    });
+
+   skipbtQ7.addEventListener("click",function(){
+   step2_3.style.display = "none";
+   step2_4.style.display = "block";
+   });
+
+
+
+   const PlaceIn = document.getElementById("PlaceIn");
+   const placeError = document.getElementById("placeError");
+   const nextbtQ8 = document.querySelector(".step2_4 .nextbt");
+   const skipbtQ8 = document.querySelector(".step2_4 .skipbt");
+   
+
+   nextbtQ8.addEventListener("click",function(){
+    const place = PlaceIn.value.trim();
+    if (place === ""){
+        placeError.textContent = "Please enter your place";
+    }else if (!isNaN(place)){
+        placeError.textContent = "Please enter your place correctly!"
+    }else{
+     step2_4.style.display = "none";
+     step2_5.style.display = "block";
+    }
+   });
+
+   skipbtQ8.addEventListener("click",function(){
+   step2_4.style.display = "none";
+   step2_5.style.display = "block";
+   });
+
+   const AssingmentIn = document.getElementById("AssingmentIn");
+   const atypeError = document.getElementById("atypeError");
+   const nextbtQ9 = document.querySelector(".step2_5 .nextbt");
+   const skipbtQ9 = document.querySelector(".step2_5 .skipbt");
+   
+
+   nextbtQ9.addEventListener("click",function(){
+    const atype = AssingmentIn.value.trim();
+    if (atype=== ""){
+       atypeError.textContent = "Please enter your assignment type ";
+    }else if (!isNaN(atype)){
+        atypeError.textContent = "Please enter your assignment type correctly!"
+    }else{
+     showvolunteeringDetails();
+     step2_5.style.display = "none";
+     
+     
+   }
+
+   });
+
+   skipbtQ9.addEventListener("click",function(){
+   showvolunteeringDetails();
+   step2_5.style.display = "none";
+   
+   });
+
+   goforwd.addEventListener("click",function(){
+   volunteeringDetails.style.display = "none";
+   step3_1.style.display = "block";
+   });
+
+   const StudyIn = document.getElementById("StudyIn");
+   const studyfError = document.getElementById("studyfError");
+   const nextbtQ10 = document.querySelector(".step3_1 .nextbt");
+   const skipbtQ10 = document.querySelector(".step3_1 .skipbt");
+   
+
+   nextbtQ10.addEventListener("click",function(){
+    const studyf = StudyIn.value.trim();
+    if (studyf=== ""){
+        studyfError.textContent = "Please enter your main field of study";
+    
+    }else{
+     step3_1.style.display = "none";
+     step3_2.style.display = "block";
+    }
+   });
+
+   skipbtQ10.addEventListener("click",function(){
+   step3_1.style.display = "none";
+   step3_2.style.display = "block";
+   });
+
+
+
+   
+   const DegreeIn = document.getElementById("DegreeIn");
+   const degreeError = document.getElementById("degreeError");
+   const nextbtQ11 = document.querySelector(".step3_2 .nextbt");
+   const skipbtQ11 = document.querySelector(".step3_2 .skipbt");
+   
+
+   nextbtQ11.addEventListener("click",function(){
+    const degree = DegreeIn.value.trim();
+    if (degree=== ""){
+        degreeError.textContent = "Please enter your highest degree";
+    
+    }else{
+     step3_2.style.display = "none";
+     step3_3.style.display = "block";
+    }
+   });
+
+   skipbtQ11.addEventListener("click",function(){
+   step3_2.style.display = "none";
+   step3_3.style.display = "block";
+   });
+   
+   
+   const UniversityIn = document.getElementById("UniversityIn");
+   const uniError = document.getElementById("uniError");
+   const nextbtQ12 = document.querySelector(".step3_3 .nextbt");
+   const skipbtQ12 = document.querySelector(".step3_3 .skipbt");
+   
+
+   nextbtQ12.addEventListener("click",function(){
+    const uni = UniversityIn.value.trim();
+    if (uni=== ""){
+        uniError.textContent = "Please enter your University";
+    }else{
+     step3_3.style.display = "none";
+     step3_4.style.display = "block";
+    }
+   });
+
+   skipbtQ12.addEventListener("click",function(){
+   step3_3.style.display = "none";
+   step3_4.style.display = "block";
+   });
+   
+   const YearIn = document.getElementById("YearIn");
+   const yearError = document.getElementById("yearError");
+   const nextbtQ13 = document.querySelector(".step3_4 .nextbt");
+   const skipbtQ13 = document.querySelector(".step3_4 .skipbt");
+   
+
+   nextbtQ13.addEventListener("click",function(){
+    const year = YearIn.value.trim();
+    if (year === ""){
+        yearError.textContent = "Please enter year";
+    }else{
+     showQualificationDetails();
+     step3_4.style.display = "none";
+    }
+   });
+
+   skipbtQ13.addEventListener("click",function(){
+   showQualificationDetails();
+   step3_4.style.display = "none";
+   });
+
+   laststep.addEventListener("click",function(){
+   QualificationDetails.style.display = "none";
+   step4_1.style.display = "block";
+   });
+
+   const HoursIn = document.getElementById("HoursIn");
+   const hoursError = document.getElementById("hoursError");
+   const nextbtQ14 = document.querySelector(".step4_1 .nextbt");
+   const skipbtQ14 = document.querySelector(".step4_1 .skipbt");
+   
+
+   nextbtQ14.addEventListener("click",function(){
+    const hours = HoursIn.value.trim();
+    if (hours=== ""){
+        hoursError.textContent = "Please fill the blank";
+    }else{
+     step4_1.style.display = "none";
+     step4_2.style.display = "block";
+    }
+   });
+
+   skipbtQ14.addEventListener("click",function(){
+   step4_1.style.display = "none";
+   step4_2.style.display = "block";
+   });
+
+   const CountryIn = document.getElementById("CountryIn");
+   const countryError = document.getElementById("countryError");
+   const nextbtQ15 = document.querySelector(".step4_2 .nextbt");
+   const skipbtQ15 = document.querySelector(".step4_2 .skipbt");
+   
+
+   nextbtQ15.addEventListener("click",function(){
+    const country = CountryIn.value.trim();
+    if (country=== ""){
+        countryError.textContent = "Please fill the blank";
+    }else{
+     step4_2.style.display = "none";
+     step4_3.style.display = "block";
+    }
+   });
+
+   skipbtQ15.addEventListener("click",function(){
+   step4_2.style.display = "none";
+   step4_3.style.display = "block";
+   });
+
+   const cnpInput = document.getElementById("ContactNumb");
+   const cnbError = document.getElementById("cnbError");
+   const nextbtQ16 = document.querySelector(".step4_3 .nextbt");
+   const skipbtQ16 = document.querySelector(".step4_3 .skipbt");
+   
+
+   nextbtQ16.addEventListener("click",function(){
+    const cnb = ContactNumb.value.trim();
+    if (cnb=== ""){
+        cnbError.textContent = "Please fill the blank";
+    }else{
+     step4_3.style.display = "none";
+     step4_4.style.display = "block";
+    }
+   });
+
+   skipbtQ16.addEventListener("click",function(){
+   step4_3.style.display = "none";
+   step4_4.style.display = "block";
+   });
+
+   const emailIn = document.getElementById("emailIn");
+   const emailError = document.getElementById("emailError");
+   const Finish_button = document.querySelector(".Finish_button");
+   
+   
+
+   Finish_button.addEventListener("click",function(){
+    const email = emailIn.value.trim();
+    if (email===""){
+        emailError.textContent = "Add email address";
+    }else{
+        showAllDetails();
+        step4_4.style.display = "none";
+       
+    }
+   })
+});
+  
+   /print user inputs/
+function showUserDetails() {
+    const userName = document.getElementById("NameIn").value.trim();
+    const userSurname = document.getElementById("SurName").value.trim();
+    const userAge = document.getElementById("AgeIn").value.trim();
+    const userGenderValue = document.getElementById("GenderIn").value;
+
+    document.getElementById("User_name").textContent = userName;
+    document.getElementById("User_surname").textContent = userSurname;
+    document.getElementById("User_age").textContent = userAge;
+    document.getElementById("User_gender").textContent = userGenderValue;
+
+    
+    document.querySelector(".userinfo").style.display = "block";
+}
+
+function showvolunteeringDetails() {
+    const rational = document.getElementById("Rationaln").value.trim();
+    const doa = document.getElementById("doaInput").value.trim();
+    const task = document.getElementById("TaskIn").value.trim();
+    const place = document.getElementById("PlaceIn").value.trim();
+    const atype = document.getElementById("AssingmentIn").value.trim();
+
+    document.getElementById("Volunteering_rational").textContent = rational;
+    document.getElementById("Volunteering_doa").textContent = doa;
+    document.getElementById("Volunteering_task").textContent = task;
+    document.getElementById("Volunteering_place").textContent = place;
+    document.getElementById("Volunteering_atype").textContent = atype;
+
+
+    document.querySelector(".volunteeringDetails").style.display = "block";
+}
+
+function showQualificationDetails() {
+    const studyf = document.getElementById("StudyIn").value.trim();
+    const degree = document.getElementById("DegreeIn").value.trim();
+    const uni = document.getElementById("UniversityIn").value.trim();
+    const year= document.getElementById("YearIn").value.trim();
+    
+
+    document.getElementById("Qualification_studyf").textContent = studyf;
+    document.getElementById("Qualification_degree").textContent = degree;
+    document.getElementById("Qualification_uni").textContent = uni;
+    document.getElementById("Qualification_year").textContent = year;
+    
+
+
+    document.querySelector(".QualificationDetails").style.display = "block";
+}
+
+function showAvailabilityDetails() {
+    const hours = document.getElementById("HoursIn").value.trim();
+    const country = document.getElementById("CountryIn").value.trim();
+    const cnb = document.getElementById("ContactNumb").value.trim();
+    const email= document.getElementById("emailIn").value.trim();
+    
+
+    document.getElementById("Availability_hours").textContent = hours;
+    document.getElementById("Availability_country").textContent = country;
+    document.getElementById("Availability_cnb").textContent = cnb;
+    document.getElementById("Availability_email").textContent =email;
+    
+
+
+    document.querySelector(".AvailabilityDetails").style.display = "block";
+    
+
+}
+
+ function showAllDetails() {
+    const userName = document.getElementById("NameIn").value.trim();
+    const userSurname = document.getElementById("SurName").value.trim();
+    const userAge = document.getElementById("AgeIn").value.trim();
+    const userGenderValue = document.getElementById("GenderIn").value;
+
+    document.getElementById("All_User_name").textContent = userName;
+    document.getElementById("All_User_surname").textContent = userSurname;
+    document.getElementById("All_User_age").textContent = userAge;
+    document.getElementById("All_User_gender").textContent = userGenderValue;
+
+    const rational = document.getElementById("Rationaln").value.trim();
+    const doa = document.getElementById("doaInput").value.trim();
+    const task = document.getElementById("TaskIn").value.trim();
+    const place = document.getElementById("PlaceIn").value.trim();
+    const atype = document.getElementById("AssingmentIn").value.trim();
+
+    document.getElementById("All_Volunteering_rational").textContent = rational;
+    document.getElementById("All_Volunteering_doa").textContent = doa;
+    document.getElementById("All_Volunteering_task").textContent = task;
+    document.getElementById("All_Volunteering_place").textContent = place;
+    document.getElementById("All_Volunteering_atype").textContent = atype;
+
+    const studyf = document.getElementById("StudyIn").value.trim();
+    const degree = document.getElementById("DegreeIn").value.trim();
+    const uni = document.getElementById("UniversityIn").value.trim();
+    const year = document.getElementById("YearIn").value.trim();
+
+    document.getElementById("All_Qualification_studyf").textContent = studyf;
+    document.getElementById("All_Qualification_degree").textContent = degree;
+    document.getElementById("All_Qualification_uni").textContent = uni;
+    document.getElementById("All_Qualification_year").textContent = year;
+
+    const hours = document.getElementById("HoursIn").value.trim();
+    const country = document.getElementById("CountryIn").value.trim();
+    const cnb = document.getElementById("ContactNumb").value.trim();
+    const email = document.getElementById("emailIn").value.trim();
+
+    document.getElementById("All_hours").textContent = hours;
+    document.getElementById("All_country").textContent = country;
+    document.getElementById("All_cnb").textContent = cnb;
+    document.getElementById("All_email").textContent = email;
+
+    document.querySelector(".AllDetails").style.display = "block";
+}
+
+
+
+
+
+</script>
+</body>
+</html>

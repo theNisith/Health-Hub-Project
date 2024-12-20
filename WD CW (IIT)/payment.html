@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/payment.css">
+    <title>Checkout</title>
+
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li> <a href="home.html" class="active">Home</a></li>
+            <li> <a href="gallery.html">Gallery</a></li>
+            <li> <a href="shop.html ">Shop</a></li>
+            <li> <a href="profile.html">User Profile</a></li>
+            <li> <a href="feedback .html">Feedback</a></li>
+            <li> <a href="sitemap.html">Sitemap</a></li>
+            <li> <a href="team.html">Team</a></li>
+        </ul>
+    </nav>
+
+<div class="checkoutscreen" id="checkoutForm">
+
+    <form action="w2052059@westminster.ac.uk" method="post" enctype="multipart/form-data">
+
+        <div class="RAW">
+
+            <div class="COL">
+
+                <h3 class="heading">billing details</h3>
+
+                <div class="inputcontainer">
+                    <span>Full Name(in capital) :</span>
+                    <input type="text" placeholder="Nisith Mandivu" required>
+                </div>
+                <div class="inputcontainer">
+                    <span>MAIL(gmail/yahoo/icloud etc):</span>
+                    <input type="email" placeholder="blahblah@blah.com" required>
+                </div>
+                <div class="inputcontainer">
+                    <span>LOCATION DETAILS :</span>
+                    <input type="text" placeholder="Adress Number - Street" required>
+                </div>
+                <div class="inputcontainer">
+                    <span>TOWN :</span>
+                    <input type="text" placeholder="panadura" required>
+                </div>
+
+                <div class="flex">
+                    <div class="inputcontainer">
+                        <span>COUNTRY :</span>
+                        <input type="text" placeholder="SL" required>
+                    </div>
+
+                    <div class="inputcontainer">
+                        <span>POSTAL CODE :</span>
+                        <input type="number" placeholder="000000" required>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="COL">
+
+                <h3 class="heading">TRANSACTION</h3>
+
+                <div class="inputcontainer">
+                    <span>PAYMENT METHODS</span>
+                    <img src="images/card_img.png" alt="card-image" required>
+                </div>
+                <div class="inputcontainer">
+                    <span>NAME DISPLAYED ON CARD :</span>
+                    <input type="text" placeholder="M.N.M DHARMAWARDANE" required="">
+                </div>
+                <div class="inputcontainer">
+                    <span>CARD NUMBER :</span>
+                    <input type="number"  maxlength="20" placeholder="0000-0000-0000-0000" required>
+                </div>
+                <div class="inputcontainer">
+                    <span>EXPIRE MONTH :</span>
+                    <input type="text" placeholder="june" required>
+
+                </div>
+
+                <div class="flex">
+                    <div class="inputcontainer">
+                        <span>EXPIRE YEAR :</span>
+                        <input type="number" maxlength="4" placeholder="2028" required>
+                    </div>
+                    <div class="inputcontainer">
+                        <span>CVV :</span>
+                        <input type="text" placeholder="000" required>
+                    </div>
+                </div>
+
+            </div>
+    
+        </div>
+
+        <div class="RAW">
+            <div class="COL">
+                <input type="reset" class="reset-button" value="Reset">
+            </div>
+            <div class="COL">
+                <input type="submit" value="Please approve your payment" class="submit-button">
+            </div>
+        </div>
+
+        <a href="shop.html">
+            <h4 class="home-button">Go to Health Store</h4>
+        </a>
+
+    </form>   
+</div>   
+
+<footer>
+
+    <a href="page_editor1.html"> <button  class="button" type="button">Page Editor 1</button> </a>
+    <a href="page_editor2.html"><button  class="button" type="button">Page Editor 2</button></a>
+    <a href="page_editor3.html"><button  class="button" type="button">Page Editor 3</button></a>
+    <a href="page_editor4.html"><button  class="button" type="button">Page Editor 4</button></a>
+
+</footer>
+
+<script src="src/payment.js"></script>
+<script src="src/cart.js"></script>
+<script src="src/main.js"></script>
+
+
+
+</body>
+</html>

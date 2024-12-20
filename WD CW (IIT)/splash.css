@@ -1,0 +1,153 @@
+* {
+    box-sizing: content-box; 
+    margin: 0;
+    padding: 0;    
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 76px;
+    left: 1;
+    top: 1;
+    border-radius: 10px;
+}
+
+header h3 {
+    position: absolute;
+    font: 1.6rem;
+    left: 10%;
+    bottom: 1rem;
+}
+
+.opening {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: #161616;
+    transition: 3s;
+    border-radius: 10px;
+}
+
+.finalpic {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 1;
+    transition: ease-in-out 2s;
+}
+
+.theme-head {
+    position: absolute;
+    transform: translate(-50%, 50%);
+    top: 10%;
+    left: 50%;
+    color: rgba(255, 255, 255, 0.918);
+}
+
+.theme {
+    position: relative;
+    display: inline-block;
+    bottom: -25px;
+    opacity: 1;
+    font-size: 55px;
+    font-family: Arial, sans-serif; 
+    color: black;
+    border-radius: 5px;
+}
+
+.theme.active {
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 2s;
+}
+
+.theme.fade {
+    bottom: 150px;
+    opacity: 1;
+    transition: ease-in-out 2s;
+}
+
+.goal {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ce1d1d;
+    font-size: 30px;
+}
+
+.team {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: black;
+    font-family: Arial, sans-serif; 
+    border-radius: 5px;
+}
+nav{
+    flex: 1;
+    text-align: center;
+    font-size: 150pxy;
+   
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: left 60px; 
+    font-size: xx-large;
+    list-style: none;
+   
+    
+}
+
+nav ul li a{
+    text-decoration: none;
+    text-align: center;
+    color:black;
+    font-weight: bold;
+    padding: 13px 15px;
+    font-size: large;
+}
+
+li a:hover:not(.active){
+    background-color: #4aa7d8;
+}
+
+.active{background-color: #0e82a2;}
+
+footer{text-align:center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px;
+    padding: 3px;
+    background-color: rgb(16, 40, 80);
+    color: black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;}
+  
+  
+  
+    .button {
+        background-color:white;
+        border: none;
+        color:black;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+    }

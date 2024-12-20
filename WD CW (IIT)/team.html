@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<meta charset = "UTF-8">
+<head>
+<title>The Health Hub</title>
+
+<style>
+nav{
+    flex: 1;
+    text-align: center;
+    font-size: 150pxy;
+   
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: left 60px; 
+    font-size: xx-large;
+    list-style: none;
+   
+    
+}
+
+nav ul li a{
+    text-decoration: none;
+    text-align: center;
+    color:black;
+    font-weight: bold;
+    padding: 13px 15px;
+    font-size: large;
+}
+
+li a:hover:not(.active){
+    background-color: #4aa7d8;
+}
+
+.active{background-color: #0e82a2;}
+
+
+
+body {
+    background-image: url(background.jpg);
+align-items: center;
+justify-content: center;
+height: 100vh;
+margin: 0;
+}
+
+
+h1{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 20px;
+    color: black;
+    font-family:'Times New Roman', Times, serif;
+    text-transform: bold;
+}
+
+h2{
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    font-family:'Times New Roman', Times, serif;
+}
+
+body{
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+   
+    
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 10px 50px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container .box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 270px;
+    height: 297px;
+    background: #dfd7d7;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0,0,0,0.15);
+    transform: 0.4s;
+}
+
+.container .box:hover{
+    height: 371px;
+
+}
+
+.container .box .bx{
+    position: absolute;
+    top: 21px;
+    width: 260px;
+    height: 230px;
+    background: black;
+    border-radius: 15px;
+    transition: 0.5s;
+
+}
+
+.container .box:hover .bx{
+    top: -100px;
+    scale: 0.75;
+    box-shadow: 0 15px 45px rgba(179, 160, 160, 0.15);
+    border-radius: 20px;
+}
+
+.container .box .bx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+
+}
+
+.container .box .content{
+    position: absolute;
+    top: 250px;
+    width: 100%;
+    padding: 0 30px;
+    height: 35px;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.container .box:hover .content{
+    top: 130px;
+    height: 250px;
+}
+
+#para {
+	color: white;
+    position: fixed;
+    bottom: 0px;
+    margin: 20px;
+}
+
+
+  header
+  {
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 40px 100px;
+      z-index: 10000;
+      color: rgb(184, 66, 66);
+      
+  }
+  
+  
+  #name{
+    margin-left: 365px;
+    font-family: "playball";
+    color:rgb(244, 244, 244);
+    font-size:4vw;
+    
+  }
+  
+  
+  #para {
+	color: white;
+    position: fixed;
+    bottom: 0px;
+    margin: 20px;
+}
+.centered-topic {
+    text-align: center; 
+    margin: 50px auto; 
+    max-width: 600px; 
+}
+footer{text-align:center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px;
+    padding: 3px;
+    background-color: rgb(16, 40, 80);
+    color: black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;}
+  
+  
+  
+    .button {
+        background-color:white;
+        border: none;
+        color:black;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+  
+  
+  </style>
+
+</head>
+<body>
+
+
+    <nav>
+        <ul>
+            <li> <a href="home.page" class="active">Home</a></li>
+            <li> <a href="gallery.html">Gallery</a></li>
+            <li> <a href="shop.html">Shop</a></li>
+            <li> <a href="profile.html">User Profile</a></li>
+            <li> <a href="feedback.html">Feedback</a></li>
+            <li> <a href="sitemap.html">Sitemap</a></li>
+            <li> <a href="team.html">Team</a></li>
+        </ul>
+    </nav>
+
+    
+    
+    <div class="centered-topic">
+        <h1>Student details</h1>
+        
+    </div>
+    
+
+    <div class="container">
+
+       
+
+
+        <div class="box" >
+            <div class="bx"><img src="Team-nisith.png" alt="nisith"></div>
+            <div class="content">
+              <h2>Nisith</h2>
+              <p>Name: Nisith mandivu</p>
+              <p>Role: Student 1</p>
+              <p>UOW Number: w2053076</p>
+              <p>IIT Number: 20231900</p>
+			  <a href = "page_editor1.html">Page Editor.</a>
+            </div>
+        </div>
+		
+        <div class="box">
+            <div class="bx"><img src="kerushan.png" alt="kerushan"></div>
+            <div class="content">
+              <h2>kerushan</h2>
+              <p>Name: Sribaskaran Kerushan </p>
+              <p>Role: Student 2</p>
+              <p>UOW Number: W2052064</p>
+              <p>IIT Number: 20232193</p>
+			  <a href = "page_editor2.html">Page Editor.</a>
+  
+            </div>
+        </div>
+  
+        <div class="box">
+            <div class="bx"><img src="team-oshan.png" alt="oshan"></div>
+            <div class="content">
+              <h2>Oshan</h2>
+              <p>Name: Oshan wijesinghe</p>
+              <p>Role: Student 3</p>
+              <p>UOW Number: w2052044</p>
+              <p>IIT Number:20231786</p>
+			  <a href = "page_editor3.html">Page Editor.</a>
+            </div>
+        </div>
+  
+        <div class="box">
+            <div class="bx"><img src="Team-imandi.png" alt="Imandi"></div>
+            <div class="content">
+              <h2>Imandi </h2>
+              <p>Name: Imandi Kavithma</p>
+              <p>Role: Student 4</p>
+              <p>UOW Number: w2053076</p>
+              <p>IIT Number: 20231900</p>
+			  <a href = "page_editor4.html">Page Editor.</a>
+            </div>
+        </div>
+  
+      </div>
+	 
+<br><br><br><br><br><br><br><br><br><br>
+
+<footer>
+
+    <a href="page_editor1.html"> <button  class="button" type="button">Page Editor 1</button> </a>
+    <a href="page_editor2.html"><button  class="button" type="button">Page Editor 2</button></a>
+    <a href="page_editor3.html"><button  class="button" type="button">Page Editor 3</button></a>
+    <a href="page_editor4.html"><button  class="button" type="button">Page Editor 4</button></a>
+
+  </footer>
+
+
+
+</body>
+</html>

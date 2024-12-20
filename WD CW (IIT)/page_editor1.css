@@ -1,0 +1,79 @@
+body{background-color: rgb(219, 215, 210);}
+
+h1{text-align: center;
+color: black;
+}
+
+.details{text-align: center;
+background-color: white;
+padding: 20px;
+margin: 20px;
+border: 1px solid black;
+}
+
+.shop, .splashscreen, .content , .checkoutsheet{
+    text-align: center;
+}
+
+a{
+    text-align: center;
+    color: rgb(63, 14, 222);
+    text-decoration: none;
+}
+nav{
+    flex: 1;
+    text-align: center;
+    font-size: 150pxy;
+   
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: left 60px; 
+    font-size: xx-large;
+    list-style: none;
+   
+    
+}
+
+nav ul li a{
+    text-decoration: none;
+    text-align: center;
+    color:black;
+    font-weight: bold;
+    padding: 13px 15px;
+    font-size: large;
+}
+
+li a:hover:not(.active){
+    background-color: #4aa7d8;
+}
+
+.active{background-color: #0e82a2;}
+
+footer{text-align:center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px;
+    padding: 3px;
+    background-color: rgb(16, 40, 80);
+    color: black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;}
+  
+  
+  
+ .button {
+        background-color:white;
+        border: none;
+        color:black;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+

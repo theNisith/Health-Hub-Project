@@ -1,0 +1,182 @@
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+.checkoutscreen {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: whitesmoke;
+  padding: 25px;
+  border-radius: 15px; 
+}
+
+.checkoutscreen form {
+  width: 700px;
+  background: rgb(143, 133, 252);
+  padding: 20px;
+  box-shadow: 0 5px 10px rgba(32, 51, 41, 0.144);
+  border-radius: 15px; 
+}
+
+.checkoutscreen form .RAW {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.checkoutscreen form .RAW .COL {
+  display: grid;
+}
+
+.checkoutscreen form .RAW .COL .heading {
+  font-size: 20px;
+  color: #4a4848;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.checkoutscreen form .RAW .COL .inputcontainer {
+  margin: 15px 0;
+}
+
+.checkoutscreen form .RAW .COL .inputcontainer span {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.checkoutscreen form .RAW .COL .inputcontainer input {
+  width: 100%;
+  border: 1px solid #ece9e9;
+  padding: 12px 16px;
+  font-size: 15px;
+  text-transform: none;
+  border-radius: 8px; 
+}
+
+.checkoutscreen form .RAW .COL .inputcontainer input:focus {
+  border: 1px solid #1a1919;
+}
+
+.checkoutscreen form .RAW .COL .inputcontainer select {
+  width: 100%;
+  border: 1px solid #eae7e7;
+  padding: 10px 15px;
+  text-transform: none;
+  border-radius: 8px; 
+}
+
+.checkoutscreen form .RAW .COL .flex .inputcontainer {
+  margin-top: 5px;
+}
+
+.checkoutscreen form .RAW .COL .inputcontainer img {
+  height: 34px;
+  margin-top: 5px;
+  filter: drop-shadow(0 0 1px #131313);
+  border-radius: 50%;
+}
+
+.checkoutscreen form .reset-button,
+.checkoutscreen form .submit-button,
+.checkoutscreen form .home-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  background: #e6009d;
+  color: #fff;
+  margin-top: 5px;
+  cursor: pointer;
+  border-radius: 8px; 
+}
+
+.checkoutscreen form .reset-button:hover {
+  background: #ef39a9;
+}
+
+.checkoutscreen form .submit-button {
+  background: #8827ae;
+}
+
+.checkoutscreen form .submit-button:hover {
+  background: #b22ecc;
+}
+
+.checkoutscreen form .home-button {
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  padding: 12px;
+  background: #526974;
+  color: #fff;
+  font-size: 18px;
+  margin-top: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.checkoutscreen .home-button:hover {
+  background: #4a486b;
+}
+
+nav{
+  flex: 1;
+  text-align: center;
+  font-size: 150pxy;
+ 
+}
+
+nav ul li{
+  list-style: none;
+  display: inline-block;
+  margin: left 60px; 
+  font-size: xx-large;
+  list-style: none;
+ 
+  
+}
+
+nav ul li a{
+  text-decoration: none;
+  text-align: center;
+  color:black;
+  font-weight: bold;
+  padding: 13px 15px;
+  font-size: large;
+}
+
+li a:hover:not(.active){
+  background-color: #4aa7d8;
+}
+
+.active{background-color: #0e82a2;}
+
+footer{text-align:center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 10px;
+  padding: 3px;
+  background-color: rgb(16, 40, 80);
+  color: black;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;}
+
+
+
+  .button {
+      background-color:white;
+      border: none;
+      color:black;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      margin: 4px 2px;
+      cursor: pointer;
+}
